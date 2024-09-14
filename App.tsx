@@ -1,21 +1,12 @@
 import "./gesture-handler";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+
+import AppRoutes from "./src/AppRoutes";
+import AppManager from "./src/components/organisms/AppManager";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello foodmob</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppManager>
+      <AppRoutes />
+    </AppManager>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
